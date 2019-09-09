@@ -1,0 +1,73 @@
+/**
+ * Plugin Name: SPG Projects
+ * Author: Mitch Negus
+ * Author URI: www.mitchnegus.com
+ * Text Domain: projects
+ * License: GPLv2 or later
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
+ *
+ * All of the CSS for the public facing functionality is included in this file.
+ *
+ * Copyright (C) 2019 Mitch Negus
+ */
+
+/* projects
+------------------------------*/
+div.project-type {
+	margin: 10px 0;
+}
+
+button.project-type-title {
+	width: 100%;
+	margin-bottom: 0;
+	padding: 10px 20px;
+	text-align: left;
+	font-size: 20pt;
+	color: #555555;
+	background-color: #EAEAEA;
+}
+button.project-type-title:hover {
+	background-color: #EAEAEA;
+}
+
+span.expansion-symbol {
+	float: right;
+}
+
+div.projects {
+	padding: 10px 20px;
+	background-color: #F7F7F7;
+}
+
+h3.project-title {
+	margin: 10px 0 15px;
+	font-size: 14pt;
+	font-weight: bold;
+}
+
+div.project-info {
+	display: flex;
+	justify-content: space-between;
+}
+
+div.project-description {
+	margin-bottom: 20px;
+	text-align: justify;	
+	font-size: 11pt;
+}
+
+div.project-description p {
+	margin-bottom: 0;
+}
+
+p.project-contact {
+	margin-top: 8px;
+	font-size: 9pt;
+}
+
+img.project-logo {
+	height: 100px;
+	width: 100px;
+	margin: 5px 10px 0 40px;
+}
+
