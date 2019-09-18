@@ -80,7 +80,7 @@ class Projects_Admin {
 		add_meta_box(
 			'project_info-meta',
 			'Project Info',
-			[$this, 'present_project_metabox_text_inputs'],
+			[$this, 'present_project_metabox'],
 			$this->projects_custom_post_type,
 			'normal',
 			'low'
@@ -188,12 +188,12 @@ class Projects_Admin {
 		}
 
 		if ( $query->get( 'orderby' ) === 'contact_name' ) {
-			$query->set( 'orderby', 'meta_value' );
 			$query->set( 'meta_key', 'contact_name' );
+			$query->set( 'orderby', 'meta_value' );
 		}
 		if ( $query->get( 'orderby' ) === 'project_type' ) {
-			$query->set( 'orderby', 'meta_value' );
 			$query->set( 'meta_key', 'project_type' );
+			$query->set( 'orderby', 'meta_value' );
 		}
 
 	}
@@ -204,7 +204,7 @@ class Projects_Admin {
 	 * @since 1.0.0
 	 * @param    WP_POST    $post                 The post associated with the current project.
 	 */
-	public function present_project_metabox_text_inputs( $post ) {
+	public function present_project_metabox( $post ) {
 
 		$titles = $this->meta_titles;
 		foreach ( $this->project_meta as $meta ) {

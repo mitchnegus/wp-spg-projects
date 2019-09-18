@@ -53,7 +53,7 @@ class Projects_Public {
 	 * @param    string    $plugin_name       The name of the plugin.
 	 * @param    string    $version           The version of this plugin.
 	 * @param    array     $options           An array of the options set and added to the database by the plugin.
-	 * @param    array     $project_meta       An array of the meta fields for the custom member post type.
+	 * @param    array     $project_meta       An array of the meta fields for the custom project post type.
 	 */
 	public function __construct( $plugin_name, $version, $project_meta ) {
 
@@ -102,7 +102,7 @@ class Projects_Public {
 	}
 
  	/**
-	 * Register the custom post type for a member.
+	 * Register the custom post type for a project.
 	 *
 	 * Each project has an individual post that stores its information (title,
 	 * description, logo, contact, references, etc.). This post is also accessed
@@ -137,7 +137,7 @@ class Projects_Public {
 	}
 
 	/**
-	 * Set the custom post archive template for the 'Members' page.
+	 * Set the custom post archive template for the 'Projects' page.
 	 * 
 	 * (Executed by loader class)
 	 *
