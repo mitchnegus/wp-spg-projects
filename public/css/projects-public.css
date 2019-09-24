@@ -13,11 +13,11 @@
 
 /* projects
 ------------------------------*/
-div.project-type {
+.wp-spg-projects div.project-type {
 	margin: 10px 0;
 }
 
-button.project-type-title {
+.wp-spg-projects button.project-type-title {
 	width: 100%;
 	margin-bottom: 0;
 	padding: 10px 20px;
@@ -26,48 +26,60 @@ button.project-type-title {
 	color: #555555;
 	background-color: #EAEAEA;
 }
-button.project-type-title:hover {
+.wp-spg-projects button.project-type-title:hover {
 	background-color: #EAEAEA;
 }
 
-span.expansion-symbol {
+.wp-spg-projects span.expansion-symbol {
 	float: right;
 }
 
-div.projects {
+.wp-spg-projects div.projects {
 	padding: 10px 20px;
 	background-color: #F7F7F7;
 }
 
-h3.project-title {
+.wp-spg-projects h3.project-title {
 	margin: 10px 0 15px;
 	font-size: 14pt;
 	font-weight: bold;
 }
 
-div.project-info {
-	display: flex;
-	justify-content: space-between;
+.wp-spg-projects div.project-info:after {
+	/* Clear the floats */
+	content: "";
+	display: table;
+	clear: both;
 }
 
-div.project-description {
+.wp-spg-projects div.project-description {
+	float: left;
+	width: 75%;
+	margin-right: 5%;
 	margin-bottom: 20px;
 	text-align: justify;	
 	font-size: 11pt;
 }
 
-div.project-description p {
+.wp-spg-projects div.project-description p {
 	margin-bottom: 0;
 }
 
-p.project-contact {
+.wp-spg-projects p.project-contact {
 	margin-top: 8px;
 	font-size: 9pt;
 }
 
-img.project-logo {
-	height: 100px;
-	width: 100px;
-	margin: 5px 10px 0 40px;
+.wp-spg-projects img.project-logo {
+	float: right;
+	width: 15%;
+	max-width: 100px;
+	margin: 1%;
 }
 
+.wp-spg-projects img.project-logo:after {
+	/* Keep the logo square */
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}

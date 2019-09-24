@@ -30,8 +30,8 @@
 	 */
 
 	// Create collapsible blocks
-	console.log($('button').length);
-	$('.collapse').click(function() {
+	var namespace = '.wp-spg-projects ';
+	$(namespace + '.collapse').click(function() {
 		console.log($(this));
 		$(this).next().toggle();
 		$(this).find('.expansion-symbol.plus').toggle();

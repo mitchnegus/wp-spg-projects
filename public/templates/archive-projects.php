@@ -109,30 +109,32 @@ get_header();
 <div id="primary" class="content-area">
 	<main id="main" class="site-main">
 
-		<div class="clearfix">
-
-			<?php
-			if ( have_posts() ) :
-				?>
-
-				<header class="entry-header">
-					<h1 class="entry-title">
-						<?php	echo esc_html( post_type_archive_title( '', false ) ); ?> 
-					</h1>
-				</header><!-- .page-header -->
+		<div class="wp-spg-projects">
+			<div class="clearfix">
 	
 				<?php
-				// Repeat the Loop (for current, recurring, and past projects)
-				loop_over_type( 'current', 'Current Projects' );
-				loop_over_type( 'recurring', 'Recurring Projects' );
-				loop_over_type( 'past', 'Past Projects' );
-				// (Op-Eds currently follow the same behavior as other projects)
-				loop_over_type( 'oped', 'Science Policy Op-Eds' );
-
-			endif;
-			?>
-
-		</div>
+				if ( have_posts() ) :
+					?>
+	
+					<header class="entry-header">
+						<h1 class="entry-title">
+							<?php	echo esc_html( post_type_archive_title( '', false ) ); ?> 
+						</h1>
+					</header><!-- .page-header -->
+		
+					<?php
+					// Repeat the Loop (for current, recurring, and past projects)
+					loop_over_type( 'current', 'Current Projects' );
+					loop_over_type( 'recurring', 'Recurring Projects' );
+					loop_over_type( 'past', 'Past Projects' );
+					// (Op-Eds currently follow the same behavior as other projects)
+					loop_over_type( 'oped', 'Science Policy Op-Eds' );
+	
+				endif;
+				?>
+	
+			</div>
+		</div><!-- .wp-spg-projects -->
 
 	</main><!-- #main -->
 </div><!-- #primary -->
