@@ -24,10 +24,10 @@
 	text-align: left;
 	font-size: 20pt;
 	color: #555555;
-	background-color: #EAEAEA;
+	background-color: #eaeaea;
 }
 .wp-spg-projects button.project-type-title:hover {
-	background-color: #EAEAEA;
+	background-color: #e6e6e6;
 }
 
 .wp-spg-projects span.expansion-symbol {
@@ -36,7 +36,7 @@
 
 .wp-spg-projects div.projects {
 	padding: 10px 20px;
-	background-color: #F7F7F7;
+	background-color: #f7f7f7;
 }
 
 .wp-spg-projects h3.project-title {

@@ -33,7 +33,7 @@
 	var namespace = '.wp-spg-projects ';
 	$(namespace + '.collapse').click(function() {
 		console.log($(this));
-		$(this).next().toggle();
+		$(this).next().slideToggle(200);
 		$(this).find('.expansion-symbol.plus').toggle();
 		$(this).find('.expansion-symbol.minus').toggle();
 	});
