@@ -36,6 +36,7 @@
 
 .wp-spg-projects div.projects {
 	padding: 10px 20px;
+	border: 1pt solid #f0f0f0;
 	background-color: #f7f7f7;
 }
 

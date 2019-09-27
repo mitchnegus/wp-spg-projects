@@ -119,6 +119,7 @@ class Projects_Public {
 			'add_new_item' 	=> __( 'Add New Project' ),
 			'edit_item' 		=> __( 'Edit Project' ),
 			'view_item'     => __( 'View Project' ),
+			'view_items'    => __( 'View Projects' ),
 			'search_items'  => __( 'Search Projects' )
 		);
 
