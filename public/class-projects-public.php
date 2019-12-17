@@ -155,5 +155,23 @@ class Projects_Public {
 
 	}
 
+	/**
+	 * Show all projects on the archive page (instead of only the first subset).
+	 *
+	 * (Executed by loader class)
+	 *
+	 * @since 	1.0.0
+	 * @param 	WP_QUERY		$query								The query passed to the 'pre_get_posts' action hook.
+	 */
+	public function show_all_projects( $query ) {
+
+		if ( ! is_admin() && $query->is_main_query() ) {
+			if ( is_post_type_archive( 'projects' ) ) {
+				$query->set( 'posts_per_page', -1 );
+			}
+		}
+
+	}
+
 }
 

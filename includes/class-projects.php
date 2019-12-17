@@ -184,6 +184,8 @@ class Projects {
 		$this->loader->add_action( 'init', $plugin_public, 'register_project_post_type' );
 		// Use custom templates for the project pages
 		$this->loader->add_filter( 'archive_template', $plugin_public, 'use_project_archive_template' );
+		// Format the 'Projects' page properly
+		$this->loader->add_action( 'pre_get_posts', $plugin_public, 'show_all_projects' );
 
 	}
 
