@@ -8,10 +8,11 @@
 /**
  * Displays each project.
  *
- * @param    string   $project_type    			 The type of project to be displayed.
- * @param    string   $project_type_title    The title of the project type to be displayed.
+ * @param    string   $project_type    			 		The type of project to be displayed.
+ * @param    string   $project_type_title    		The title of the project type to be displayed.
+ * @param		 bool			$project_type_singular 		A flag whether the project type is singular (without subprojects)
  */
-function loop_over_type( $project_type, $project_type_title ) {
+function loop_over_type( $project_type, $project_type_title, $project_type_singular = False ) {
 	// Display the project type title
 	?>
 
@@ -31,7 +32,8 @@ function loop_over_type( $project_type, $project_type_title ) {
 				// Display associated projects for the given project type
 				$post_project_type = get_post_meta( $post_id, 'project_type', true);
 				if ( $post_project_type == $project_type ) {
-					display_project( $post );
+					$show_title = ! ( $project_type_singular );
+					display_project( $post, $show_title );
 				}
 			endwhile;
 			?>
@@ -45,9 +47,10 @@ function loop_over_type( $project_type, $project_type_title ) {
 /**
  * Displays each project.
  *
- * @param    WP_POST   $post            The project post.
+ * @param    WP_POST   $post            		The project post.
+ * @param    bool			 $show_title					A flag indicating whether the project's title should be displayed.
  */
-function display_project( $post ) {
+function display_project( $post, $show_title = True ) {
 
 	$contact_name = get_post_meta( $post->ID, 'contact_name', true );
 	$contact_email = get_post_meta( $post->ID, 'contact_email', true );
@@ -57,7 +60,16 @@ function display_project( $post ) {
 
 	<div class="project-container">
 
-		<h3 class="project-title"><?php the_title(); ?></h3>
+		<?php
+		if ( $show_title ) {
+			?>
+
+			<h3 class="project-title"><?php the_title(); ?></h3>
+
+			<?php
+		}
+		?>
+
 		<div class="project-info">
 			<div class="project-description">
 
@@ -127,8 +139,9 @@ get_header();
 					loop_over_type( 'current', 'Current Projects' );
 					loop_over_type( 'recurring', 'Recurring Projects' );
 					loop_over_type( 'past', 'Past Projects' );
-					// (Op-Eds currently follow the same behavior as other projects)
-					loop_over_type( 'oped', 'Science Policy Op-Eds' );
+					// Display Op-Eds as a singular project type
+					$singular = True;
+					loop_over_type( 'oped', 'Science Policy Op-Eds', $singular );
 	
 				endif;
 				?>
