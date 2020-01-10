@@ -85,7 +85,6 @@ class Projects_Admin {
 			'normal',
 			'low'
 		);
-		
 
 	}
 
@@ -114,6 +113,7 @@ class Projects_Admin {
 				}
 
 			}
+
 	}
 
 	/**
