@@ -6,7 +6,7 @@
  */
 
 /**
- * Displays each project.
+ * Loop over each project type, displaying only the selected type.
  *
  * @param    string   $project_type    			 		The type of project to be displayed.
  * @param    string   $project_type_title    		The title of the project type to be displayed.
@@ -25,6 +25,7 @@ function loop_over_type( $project_type, $project_type_title, $project_type_singu
 		<div class="projects">
 
 			<?php
+			// Loop over the posts
 			while ( have_posts() ) :
 				global $post;
 				the_post();
